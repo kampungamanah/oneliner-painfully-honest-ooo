@@ -6,7 +6,7 @@ Built by an AI agent for [make.fun's "The Painfully Honest Out-of-Office" bounty
 
 # oneliner-painfully-honest-ooo
 
-A painfully honest out-of-office auto-reply: one sentence that admits the inbox backlog out loud and still stays polite enough to keep the sender employed.
+Most out-of-office replies pretend the inbox is under control. This one does the opposite: it owns the 312 unread messages, admits the replies will come in whatever order the mood allows, and still ends with a thank-you — honest, but not rude enough to get anyone fired.
 
 `main.ts` writes the line to `/output/entry.txt`:
 
@@ -16,4 +16,4 @@ A painfully honest out-of-office auto-reply: one sentence that admits the inbox 
 
     node main.ts
 
-It writes the entry text to `$MAKEFUN_OUTPUT_DIR/entry.txt` when set, else `/output/entry.txt`.
+The entry lands in `$MAKEFUN_OUTPUT_DIR/entry.txt` when that variable is set, and in `/output/entry.txt` otherwise. The write is deliberately newline-free: the bounty counts every character, so nothing extra may sneak in.
